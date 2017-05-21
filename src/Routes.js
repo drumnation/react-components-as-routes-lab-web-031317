@@ -10,4 +10,12 @@ import Movies from './components/Movies';
 
 export default (
   /* add routes here */
-);
+  <Router history={browserHistory}>
+    <Route path="/" component={App} >
+      <IndexRoute component={Home} />
+      <Route path="/movies" component={Movies} />
+      <Route path="/actors" component={Actors} />
+      <Route path="/directors" component={Directors} />
+    </Route>
+  </Router>
+)
